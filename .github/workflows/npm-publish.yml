@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 切换仓库
-        uses: actions/checkout@master
+        uses: actions/checkout@main
       - name: 准备Node环境
-        uses: actions/setup-node@master
+        uses: actions/setup-node@main
         with:
           node-version: 16.18.0
       - name: 安装依赖以及编译
