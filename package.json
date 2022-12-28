@@ -1,6 +1,5 @@
 {
   "name": "nx-ui",
-  "private": true,
   "version": "1.0.1",
   "description": "nx-ui",
   "type": "module",
