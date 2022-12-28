@@ -2,16 +2,16 @@ name: npm-publish
 on:
   push:
     branches:
-      - master # Change this to your default branch
+      - main # Change this to your default branch
 jobs:
   npm-publish:
     name: npm-publish
     runs-on: ubuntu-latest
     steps:
       - name: 切换仓库
-        uses: actions/checkout@main
+        uses: actions/checkout@master
       - name: 准备Node环境
-        uses: actions/setup-node@main
+        uses: actions/setup-node@master
         with:
           node-version: 16.18.0
       - name: 安装依赖以及编译
