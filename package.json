@@ -1,6 +1,6 @@
 {
-  "name": "nx-ui",
-  "version": "1.0.1",
+  "name": "@nextgroup/nx-ui",
+  "version": "1.0.2",
   "description": "nx-ui",
   "type": "module",
   "license": "Mozilla Public License Version 2.0",
