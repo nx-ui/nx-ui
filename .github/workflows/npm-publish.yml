@@ -21,3 +21,15 @@ jobs:
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
           access: public
+  cnpm-sync:
+    name: cnpm-sync
+    needs: npm-publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: 同步cnpm仓库
+        uses: fjogeleit/http-request-action@master
+        with:
+          # 需要把'express'换成你的包名，谨记
+          url: 'https://npmmirror.com/sync/@nextgroup/nx-ui'
+          timeout: 50000
+          method: GET

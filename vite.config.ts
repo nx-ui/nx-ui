@@ -2,7 +2,7 @@
  * @Author: next-ui 55926111@qq.com
  * @Date: 2022-12-27 15:59:28
  * @LastEditors: next-ui 55926111@qq.com
- * @LastEditTime: 2022-12-28 15:56:21
+ * @LastEditTime: 2022-12-29 10:38:07
  * @FilePath: \NxUI\vite.config.ts
  * @Description:
  *
@@ -31,6 +31,12 @@ export default defineConfig({
     outDir: 'dist',
     // 兼容
     target: 'es2015',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(fileURLToPath(new URL('./', import.meta.url)), 'src/index.ts'),
@@ -60,6 +66,7 @@ export default defineConfig({
       },
       less: {
         charset: false,
+        javascriptEnabled: true,
         additionalData: '@import "@/assets/global.less";',
       },
     },
